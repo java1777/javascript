@@ -1,294 +1,194 @@
-// 1-Misol!
-// let a = 17;
+// 1-Masala!
+// let k = 7;
+// let n = 5;
 
-// if (a > 0) {
-//     a = a + 1;
-// } else {
-
+// for (let i = 0; i < n; i++) {
+//     console.log(k);
+    
 // }
 
-// console.log(a);
+// 2-Masala!
+// let a = 1;
+// let b = 11;
+// let count = 0;
 
-// 2-Misol!
-// let a = +prompt ("manfiy yo musbat son kiriting!");
-
-// if (a > 0) {
-//     a = a + 1;
-// } else {
-//     a = a - 2;
+// for (let i = a; i <= b; i++) {
+//     console.log(i);
+//     count++;
 // }
-// console.log(a);
+// console.log("Hamma sonlar:", count);
 
-// 3-Misol!
-// let a = +prompt("Son kiriting:");
+// 3-Masala!
+// let a = 1;
+// let b = 11;
+// let count = 0;
 
-// if (a > 0) a++;
-// else if (a < 0) a -= 2;
-// else a = 10;
-
-// console.log(a);
-
-// 4-Misol!
-// let a = 11;
-// let b = -10;
-// let c = 17;
-// let musbat = 0;
-// let manfiy = 0;
-
-// if (a > 0) {
-//     musbat++
-// } else {
-//     manfiy++
+// for (let i = b; i >= a; i--) {
+//     console.log(i);
+//     count++;
 // }
-// if (b > 0) {
-//     musbat++
-// } else {
-//     manfiy++
-// }
-// if (c > 0) {
-//     musbat++
-// } else {
-//     manfiy++
-// }
-// console.log(musbat);
+// console.log("Hamma sonlar:", count);
 
-// 5-Misol!
-// let a = 11;
-// let b = -10;
-// let c = 17;
-// let musbat = 0;
-// let manfiy = 0;
+// 4-Masala!
+// let price = 17000;
 
-// if (a > 0) {
-//     musbat++
-// } else {
-//     manfiy++
-// }
-// if (b > 0) {
-//     musbat++
-// } else {
-//     manfiy++
-// }
-// if (c > 0) {
-//     musbat++
-// } else {
-//     manfiy++
-// }
-// console.log(musbat , manfiy)
-
-// 6-Misol!
-// let a = +prompt("1-sonni kiriting:");
-// let b = +prompt("2-sonni kiriting:");
-
-// if (a > b) {
-//   console.log("Katta son:", a);
-// } else if (b > a) {
-//   console.log("Katta son:", b);
-// } else {
-//   console.log("Ikkala son teng");
+// for (let i = 1; i<= 10; i++) {
+//     console.log(i + " kg =", i * price, "som");
+    
 // }
 
-// 7-Misol!
-// let a = +prompt("1-sonni kiriting:");
-// let b = +prompt("2-sonni kiriting:");
+// 5-Masala!
+// let price = 17000;
 
-// if (a < b) {
-//   console.log("Kichik sonning tartib raqami: 1");
-// } else if (b < a) {
-//   console.log("Kichik sonning tartib raqami: 2");
-// } else {
-//   console.log("Ikkala son teng, tartib raqami yo");
+// for (let i = 0.1; i<=1; i+= 0.1) {
+//     console.log(i.toFixed(1) + " kg = ", (i * price).toFixed(0));
 // }
 
-// 8-Misol!
-// let a = +prompt("a:");
-// let b = +prompt("b:");
+// 6-Masala!
+// let price = 17000;
 
-// if (a > b) {
-//   console.log(a, b);
-// } else if (b > a) {
-//   console.log(b, a);
-// } else {
-//   console.log("Teng");
+// for ( let i = 0.2; i <= 2; i +=0.2) {
+//     console.log(i.toFixed(1) + " kg = ", (i * price).toFixed(0));
+    
 // }
 
-// 9-Misol!
-// let A = +prompt("A:");
-// let B = +prompt("B:");
+// 7-Masala!
+// let a = 1;
+// let b = 11;
+// let sum = 0;
 
-// if (A > B) {
-//   let temp = A;
-//   A = B;
-//   B = temp;
+// for (let i = a; i <= b; i++) {
+//     sum +=i;
+// }
+// console.log("Yig'indi:", sum);
+
+// 8-Masala!
+// let a = 2;
+// let b = 5;
+// let p = 1;
+
+// for (let i = a; i <= b; i++) {
+//     p *= i;
+// }
+// console.log("Kopaytmasi:", p);
+
+// 9-Masala!
+// let a = 1;
+// let b = 11;
+// let sum = 0;
+
+// for (let i = a; i <= b; i++) {
+//     sum += i * i;
+// }
+// console.log("Kvadratlarini yeg'indisi:", sum);
+
+// 10-Masala!
+// let n = 7;
+// let sum = 0;
+
+// for (let i = 1; i <= n; i++) {
+//     sum += 1 / i;
+// }
+// console.log(sum);
+
+// 11-Masala!
+// let n = 7;
+// let sum = 0;
+
+// for (let i = n; i <= 2 * n; i++) {
+//     sum += i * i
+// }
+// console.log(sum);
+
+// 12-Masala!
+// let n = 7;
+// let p = 1;
+
+// for (let i = 1; i <= n; i++) {
+//     p *= (1 + i / 10);
+// }
+// console.log(p);
+
+// 13-Masala!
+// let n = 7;
+// let p = 1;
+
+// for (let i = 1; i<= n; i++) {
+//     p *= i;
+// }
+// console.log(p);
+
+// 14-Masala!
+// let n = 7;
+// let sum = 0;
+
+// for (let i = 1; i <= 2*n -1; i +=2) {
+//     sum += i * i
+// }
+// console.log(sum);
+
+// 15-Masala!
+// let a = 5;
+// let n = 7;
+// let result = 1;
+
+// for (let i = 0; i < n; i++) {
+//     result *= a;
 // }
 
-// console.log("A =", A, "B =", B);
+// console.log(result);
 
-// 10-Misol!
-// let A = +prompt("A:");
-// let B = +prompt("B:");
+// 16-Masala!
+// let a = 5;
+// let n = 7;
+// let daraja = 1;
 
-// if (A !== B) {
-//   let yigindi = A + B;
-//   A = yigindi;
-//   B = yigindi;
-// } else {
-//   A = 0;
-//   B = 0;
+// for (let i = 1; i <= n; i++) {
+//     daraja *= a;
+//     console.log(i + "-daraja:", daraja);
 // }
 
-// console.log("A =", A, "B =", B);
+// 17-Masala
+// let a = 5;
+// let n = 7;
+// let daraja = 1;
+// let sum = 1;
 
-// 11-Misol!
-// let A = +prompt("A:");
-// let B = +prompt("B:");
-
-// if (A !== B) {
-//   let max = A > B ? A : B;
-//   A = max;
-//   B = max;
-// } else {
-//   A = 0;
-//   B = 0;
+// for (let i = 1; i <= n; i++) {
+//     daraja *= a;
+//     console.log(i + "-daraja:", daraja);
+//     sum += daraja;
 // }
+// console.log("Yeg'indisi:", sum);
 
-// console.log("A =", A, "B =", B);
+// 18-Masala!
+// let a = 5;
+// let n = 7;
+// let sum = 1;
+// let daraja = 1;
 
-// 12-Misol!
-// let a = +prompt("a:");
-// let b = +prompt("b:");
-// let c = +prompt("c:");
-
-// let min = a;
-
-// if (b < min) min = b;
-// if (c < min) min = c;
-
-// console.log("Kichik son:", min);
-
-// 13-Misol!
-// let a = +prompt("a:");
-// let b = +prompt("b:");
-// let c = +prompt("c:");
-
-// let orta;
-
-// if ((a > b && a < c) || (a > c && a < b)) orta = a;
-// else if ((b > a && b < c) || (b > c && b < a)) orta = b;
-// else orta = c;
-
-// console.log("Ortacha son:", orta);
-
-// 14-Misol!
-// let a = +prompt("a:");
-// let b = +prompt("b:");
-// let c = +prompt("c:");
-
-// let min = Math.min(a, b, c);
-// let max = Math.max(a, b, c);
-
-// console.log("Kichigi:", min);
-// console.log("Kattasi:", max);
-
-// 15-Misol!
-// let a = +prompt("a:");
-// let b = +prompt("b:");
-// let c = +prompt("c:");
-
-// let AB = a + b;
-// let AC = a + c;
-// let BC = b + c;
-
-// if (AB >= AC && AB >= BC) {
-//   console.log("Eng katta yigindi:", a, b);
-// } else if (AC >= AB && AC >= BC) {
-//   console.log("Eng katta yigindi:", a, c);
-// } else {
-//   console.log("Eng katta yigindi:", b, c);
+// for (let i = 1; i <= n; i++) {
+//     daraja *= a;
+//     sum += ((-1) **i) * daraja
 // }
+// console.log("Natijasi:", sum);
 
-// 16-Misol!
-// let A = +prompt("A:");
-// let B = +prompt("B:");
-// let C = +prompt("C:");
+// 19-Masala!
+// let n = 7;
+// let factorial = 1;
 
-// if (A < B && B < C) {
-//   A *= 2;
-//   B *= 2;
-//   C *= 2;
-// } else {
-//   A = -A;
-//   B = -B;
-//   C = -C;
+// for (let i = 1; i <=n; i++) {
+//     factorial *= i;
 // }
+// console.log("n! =", factorial);
 
-// console.log("Natija:", A, B, C);
+// 20-Masala!
+let n = 7;
+let factorial = 1;
+let sum = 0;
 
-// 17-Misol!
-// let A = +prompt("A:");
-// let B = +prompt("B:");
-// let C = +prompt("C:");
-
-// if (A > B && B > C) {
-//   A *= 2;
-//   B *= 2;
-//   C *= 2;
-// } else {
-//   A = -A;
-//   B = -B;
-//   C = -C;
-// }
-
-// console.log("Natija:", A, B, C);
-
-// 18-Misol!
-// let A = +prompt("A:");
-// let B = +prompt("B:");
-// let C = +prompt("C:");
-
-// if (A === B && B !== C) {
-//   console.log(3);
-// } else if (A === C && C !== B) {
-//   console.log(2);
-// } else if (B === C && A !== B) {
-//   console.log(1);
-// } else {
-//   console.log("Xatolik: Faqat bitta son boshqacha bolishi kerak!");
-// }
-
-// 19-Misol!
-// let A = +prompt("A:");
-// let B = +prompt("B:");
-// let C = +prompt("C:");
-// let D = +prompt("D:");
-
-// if (A === B && B === C && C !== D) {
-//   console.log(4);
-// } else if (A === B && B === D && D !== C) {
-//   console.log(3);
-// } else if (A === C && C === D && D !== B) {
-//   console.log(2);
-// } else if (B === C && C === D && D !== A) {
-//   console.log(1);
-// } else {
-//   console.log("Xato: uchta son teng bolishi kerak!");
-// }
-
-// 20-Misol!
-let A = +prompt("A:");
-let B = +prompt("B:");
-let C = +prompt("C:");
-
-let dB = (A > B) ? A - B : B - A;
-let dC = (A > C) ? A - C : C - A;
-
-if (dB < dC) {
-  console.log("Eng yaqin nuqta: B");
-  console.log("Masofa:", dB);
-} else if (dC < dB) {
-  console.log("Eng yaqin nuqta: C");
-  console.log("Masofa:", dC);
-} else {
-  console.log("B va C A ga teng masofada.");
-  console.log("Masofa:", dB);
+for (let i = 1; i <=n; i++) {
+    factorial *= i;
+    sum += factorial;
 }
+console.log("Yeg'indisi", sum);
