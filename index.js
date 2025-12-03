@@ -1,194 +1,71 @@
-// 1-Masala!
-// let k = 7;
-// let n = 5;
+// 1-Masala
+// const value1 = 42;
+// const value2 = "hello";
+// const value3 = null
 
-// for (let i = 0; i < n; i++) {
-//     console.log(k);
-    
-// }
+// console.log(typeof value1);
+// console.log(typeof value2);
+// console.log(typeof value3);
 
-// 2-Masala!
-// let a = 1;
-// let b = 11;
-// let count = 0;
-
-// for (let i = a; i <= b; i++) {
-//     console.log(i);
-//     count++;
-// }
-// console.log("Hamma sonlar:", count);
-
-// 3-Masala!
-// let a = 1;
-// let b = 11;
-// let count = 0;
-
-// for (let i = b; i >= a; i--) {
-//     console.log(i);
-//     count++;
-// }
-// console.log("Hamma sonlar:", count);
-
-// 4-Masala!
-// let price = 17000;
-
-// for (let i = 1; i<= 10; i++) {
-//     console.log(i + " kg =", i * price, "som");
-    
-// }
-
-// 5-Masala!
-// let price = 17000;
-
-// for (let i = 0.1; i<=1; i+= 0.1) {
-//     console.log(i.toFixed(1) + " kg = ", (i * price).toFixed(0));
-// }
-
-// 6-Masala!
-// let price = 17000;
-
-// for ( let i = 0.2; i <= 2; i +=0.2) {
-//     console.log(i.toFixed(1) + " kg = ", (i * price).toFixed(0));
-    
-// }
-
-// 7-Masala!
-// let a = 1;
-// let b = 11;
-// let sum = 0;
-
-// for (let i = a; i <= b; i++) {
-//     sum +=i;
-// }
-// console.log("Yig'indi:", sum);
-
-// 8-Masala!
-// let a = 2;
-// let b = 5;
-// let p = 1;
-
-// for (let i = a; i <= b; i++) {
-//     p *= i;
-// }
-// console.log("Kopaytmasi:", p);
-
-// 9-Masala!
-// let a = 1;
-// let b = 11;
-// let sum = 0;
-
-// for (let i = a; i <= b; i++) {
-//     sum += i * i;
-// }
-// console.log("Kvadratlarini yeg'indisi:", sum);
-
-// 10-Masala!
-// let n = 7;
-// let sum = 0;
-
-// for (let i = 1; i <= n; i++) {
-//     sum += 1 / i;
-// }
-// console.log(sum);
-
-// 11-Masala!
-// let n = 7;
-// let sum = 0;
-
-// for (let i = n; i <= 2 * n; i++) {
-//     sum += i * i
-// }
-// console.log(sum);
-
-// 12-Masala!
-// let n = 7;
-// let p = 1;
-
-// for (let i = 1; i <= n; i++) {
-//     p *= (1 + i / 10);
-// }
-// console.log(p);
-
-// 13-Masala!
-// let n = 7;
-// let p = 1;
-
-// for (let i = 1; i<= n; i++) {
-//     p *= i;
-// }
-// console.log(p);
-
-// 14-Masala!
-// let n = 7;
-// let sum = 0;
-
-// for (let i = 1; i <= 2*n -1; i +=2) {
-//     sum += i * i
-// }
-// console.log(sum);
-
-// 15-Masala!
-// let a = 5;
-// let n = 7;
-// let result = 1;
-
-// for (let i = 0; i < n; i++) {
-//     result *= a;
-// }
+// 2-Masala
+// let isLoggedIn = true;
+// let hasPremium = false;
+// let result = isLoggedIn && hasPremium;
 
 // console.log(result);
 
-// 16-Masala!
-// let a = 5;
-// let n = 7;
-// let daraja = 1;
 
-// for (let i = 1; i <= n; i++) {
-//     daraja *= a;
-//     console.log(i + "-daraja:", daraja);
-// }
+// 3-Masala
+// const amountStr = "1250.75";
 
-// 17-Masala
-// let a = 5;
-// let n = 7;
-// let daraja = 1;
-// let sum = 1;
+// console.log(amountStr, typeof Number(amountStr));
 
-// for (let i = 1; i <= n; i++) {
-//     daraja *= a;
-//     console.log(i + "-daraja:", daraja);
-//     sum += daraja;
-// }
-// console.log("Yeg'indisi:", sum);
+// 4-Masala
+// const num = 10;
+// const text = "20";
+// console.log(num + text, typeof String(num,text));
 
-// 18-Masala!
-// let a = 5;
-// let n = 7;
-// let sum = 1;
-// let daraja = 1;
+// 5-Masala
+// let ageNum = 30;
+// ageNum = "30"
 
-// for (let i = 1; i <= n; i++) {
-//     daraja *= a;
-//     sum += ((-1) **i) * daraja
-// }
-// console.log("Natijasi:", sum);
+// console.log(ageNum, typeof ageNum);
 
-// 19-Masala!
-// let n = 7;
-// let factorial = 1;
+// // 2chi variant
+// let ageNum1 = 30;
+// let result = JSON.stringify(ageNum1);
 
-// for (let i = 1; i <=n; i++) {
-//     factorial *= i;
-// }
-// console.log("n! =", factorial);
+// console.log(result);
+// console.log(typeof result);
 
-// 20-Masala!
-let n = 7;
-let factorial = 1;
-let sum = 0;
+// 6-Masala
+// let str1 = "false";
+// let str2 = "";
 
-for (let i = 1; i <=n; i++) {
-    factorial *= i;
-    sum += factorial;
-}
-console.log("Yeg'indisi", sum);
+// console.log(Boolean(str1));
+// console.log(Boolean(str2));
+
+// 7-Masala
+// const a = 0;
+// const b = false;
+
+// console.log(a == b);
+
+// 8-Misol
+// const x = "100";
+// const y = 100;
+
+// console.log(x === y);
+
+// 9-Misol
+// const strNum = "50";
+
+// console.log(strNum, typeof +strNum);
+
+// 10-Misol
+// const c = undefined;
+// const d = null;
+
+// console.log(c == d); //2si 0ga teng bogani uchun true chiqardi
+// console.log(c === d); // type boshqa boshqa bogani uchun false chiqardi!
+
