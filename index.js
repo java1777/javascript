@@ -1,351 +1,37 @@
-// For - 6
-// let price = 17000;
+// 1. Promptdan foydalanuvchi vesini so'rang, agar 90 kgdan ko'p bo'lsa, dieta qiling desin, agar 70 kgdan kam bo'lsa ko'proq ovqat yeng desin, agar boshqa variantlarda yaxshi desin.
 
-// for (let i = 0.2; i <= 2; i += 0.2) {
-//   console.log(i.toFixed(1) + " kg = ", (i * price).toFixed(0));
-// }
+// let a = +prompt("kg kirgiz");
 
-// For - 7
-// let a = 77;
-// let b = 100;
-// let sum = 0;
-
-// for (let i = a; i <= b; i++) {
-//   sum += 1;
-// }
-// console.log("Yeg'indi:", sum);
-
-// For - 8
-// let a = 7;
-// let b = 11;
-// let p = 1;
-
-// for (let i = a; i <= b; i++) {
-//   p *= i;
-// }
-// console.log("Kopaytmasi:", p);
-
-// For - 9
-// let a = 1;
-// let b = 2;
-// let sum = 0;
-
-// for (let i = a; i <= b; i++) {
-//   sum += i * i;
-// }
-// console.log("Kvadratlarini yeg'indisi:", sum);
-
-// <----------------------------------------------------->
-
-// While - 16
-// let kunlikMasofa = 10;
-// let jami = kunlikMasofa;
-// let kun = 1;
-// let p = 10;
-
-// while (jami < 200) {
-//   kunlikMasofa = kunlikMasofa + (kunlikMasofa * p) / 100;
-//   jami += kunlikMasofa;
-//   kun++;
-// }
-// console.log("Natija:" + kun + "kundan kegin 200km dan oshadi");
-// console.log("Jami masofa:" + jami.toFixed(2) + " km");
-
-// While - 17
-// let n = 123;
-// let sum = 0;
-
-// while (n > 0) {
-//   console.log(n % 10);
-
-//   sum += n % 10;
-
-//   n = parseInt(n / 10);
-
-//   if (sum > 0) {
-//     console.log("Raqamlar yeg'indisi:", sum);
-//   } else {
-//     console.log("Hisoblab bo'lmadi");
-//   }
-// }
-
-// While - 18
-// let n = 123;
-// let reverse = 0;
-
-// while (n > 0) {
-//   console.log(n % 10);
-
-//   reverse = reverse * 10 + (n % 10);
-
-//   n = parseInt(n / 10);
-// }
-
-// if (reverse > 0) {
-//   console.log("Teskari son:", reverse);
+// if (a >= 90) {
+//   console.log("dieta qiling");
+// } else if (a <= 70) {
+//   console.log("ko'proq ovqat yeng");
 // } else {
-//   console.log("Hisoblab bo'lmadi");
+//   console.log("yaxshi");
 // }
 
-// While - 19
-// let n = 77;
+// 2. N berilgan 1dan n gacha raqamlar orasidagi juft sonlarning yigindisini hisoblab bering.
+
+// Masalan n=6 busa 1 + 2 + 3 + 4 + 5 qoshib 15 chiqadi.
+
+// let n = 6;
 // let sum = 0;
-
-// while (n > 0) {
-//   console.log(n % 10);
-
-//   sum += n % 10;
-
-//   n = parseInt(n / 10);
-// }
-
-// if (sum > 0) {
-//   console.log("Raqamlar yig'indisi:", sum);
-// } else {
-//   console.log("Hisoblab bomadi");
-// }
-
-// While - 20
-// let n = 275412;
-// let ikkiBormi = false;
-
-// while (n > 0) {
-//   console.log(n % 10);
-
-//   if (n % 10 === 2) {
-//     ikkiBormi = true;
-//     break;
-//   }
-//   n = parseInt(n / 10);
-// }
-// if (ikkiBormi === true) {
-//   console.log("Ikki bor!");
-// } else if (ikkiBormi === false) {
-//   console.log("Ikki yo'q");
-// }
-
-// While - 21
-// let n = 275412;
-// let toqBormi = false;
-
-// while (n > 0) {
-//   let oxirgi = n % 10;
-
-//   if (oxirgi % 2 === 1) {
-//     toqBormi = true;
-//     break;
-//   }
-
-//   n = parseInt(n / 10);
-// }
-
-// if (toqBormi) {
-//   console.log("Toq raqam bor!");
-// } else {
-//   console.log("Toq raqam yo'q!");
-// }
-
-// While - 22
-// let n = 71;
-// let i = 2;
-// let tub = true;
-
-// while (i < n) {
-//   if (n % i === 0) {
-//     tub = false;
-//     break;
-//   }
-//   i++;
-// }
-
-// if (tub) {
-//   console.log("Tub son");
-// } else {
-//   console.log("Tubmas");
-// }
-
-// While - 23
-// let a = 77;
-// let b = 7;
-
-// while (a !== b) {
-//   if (a > b) {
-//     a = a - b;
-//   } else {
-//     b = b - a;
+// for (let i = 1; i <= n; i++) {
+//   if (i % 2 === 0) {
+//     sum = sum + i;
 //   }
 // }
-// console.log("EKUB =", a);
+// console.log(sum);
 
-// <----------------------------------------------------->
+// 3. N berilgan n gacha bo'lgan raqamlarning orasidan toqlarni kvadratini olib array yasab bering va u arrayning har bir azosini teskari tarzda, yani eng oxirgisidan boshlab, ekranga chiqaring.
 
-// If - 6
-// let a = 77;
-// let b = 55;
-
-// if (a > b) {
-//   console.log("Katta son:", a);
+// let N3 = 10;
+// let toqK = 0;
+// let arr = [];
+// for (let i = 0; i <= N3; i++) {
+//   if (i % 2 != 0) {
+//     toqK = i ** 2;
+//     arr.unshift(toqK);
+//   }
 // }
-
-// if (b > a) {
-//   console.log("Katta son:", b);
-// }
-
-// if (a === b) {
-//   console.log("Ikkalasi teng");
-// }
-
-// If - 7
-// let a = 77;
-// let b = 55;
-
-// if (a < b) {
-//   console.log("Kichik son tartib raqami: 1");
-// }
-
-// if (b < a) {
-//   console.log("Kichik son tartib raqami: 2");
-// }
-
-// if (a === b) {
-//   console.log("Ikkalasi teng");
-// }
-
-// If - 8
-// let a = 77;
-// let b = 55;
-
-// if (a > b) {
-//   console.log(a);
-//   console.log(b);
-// }
-
-// if (b > a) {
-//   console.log(b);
-//   console.log(a);
-// }
-
-// if (a === b) {
-//   console.log("Ikkalasi teng");
-// }
-
-// <----------------------------------------------------->
-
-// Boolean - 1
-// let A = 75;
-
-// if (A > 0) {
-//   console.log(true);
-// }
-
-// if (A <= 0) {
-//   console.log(false);
-// }
-
-// Boolean - 2
-// let A = 55;
-
-// if (A % 2 !== 0) {
-//   console.log(true);
-// }
-
-// if (A % 2 === 0) {
-//   console.log(false);
-// }
-
-// Boolean - 3
-// let A = 77;
-
-// if (A % 2 === 0) {
-//   console.log(true);
-// }
-
-// if (A % 2 !== 0) {
-//   console.log(false);
-// }
-
-// Boolean - 4
-// let A = 20;
-// let B = 10;
-
-// if (A > 2 && B <= 3) {
-//   console.log(true);
-// }
-
-// if (!(A > 2 && B <= 3)) {
-//   console.log(false);
-// }
-
-// Boolean - 5
-// let A = 1;
-// let B = 7;
-
-// if (A >= 0 || B < -2) {
-//   console.log(true);
-// }
-
-// if (!(A >= 0 || B < -2)) {
-//   console.log(false);
-// }
-
-// Boolean - 6
-// let A = 11;
-// let B = 55;
-// let C = 77;
-
-// if (A <= B && B <= C) {
-//   console.log(true);
-// }
-
-// if (!(A <= B && B <= C)) {
-//   console.log(false);
-// }
-
-// Boolean - 7
-// let A = 11;
-// let B = 55;
-// let C = 77;
-
-// if ((A < B && B < C) || (C < B && B < A)) {
-//   console.log(true);
-// }
-
-// if (!((A < B && B < C) || (C < B && B < A))) {
-//   console.log(false);
-// }
-
-// Boolean - 8
-// let A = 77;
-// let B = 55;
-
-// if (A % 2 !== 0 && B % 2 !== 0) {
-//   console.log(true);
-// }
-
-// if (!(A % 2 !== 0 && B % 2 !== 0)) {
-//   console.log(false);
-// }
-
-// Boolean - 9
-// let A = 77;
-// let B = 55;
-
-// if (A % 2 !== 0 || B % 2 !== 0) {
-//   console.log(true);
-// }
-
-// if (!(A % 2 !== 0 || B % 2 !== 0)) {
-//   console.log(false);
-// }
-
-// Boolean - 10
-// let A = 77;
-// let B = 55;
-
-// if ((A % 2 !== 0 && B % 2 === 0) || (A % 2 === 0 && B % 2 !== 0)) {
-//   console.log(true);
-// }
-
-// if (!((A % 2 !== 0 && B % 2 === 0) || (A % 2 === 0 && B % 2 !== 0))) {
-//   console.log(false);
-// }
+// console.log("Toq sonlar kvadrati", arr);
