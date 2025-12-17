@@ -1,37 +1,133 @@
-// 1. Promptdan foydalanuvchi vesini so'rang, agar 90 kgdan ko'p bo'lsa, dieta qiling desin, agar 70 kgdan kam bo'lsa ko'proq ovqat yeng desin, agar boshqa variantlarda yaxshi desin.
-
-// let a = +prompt("kg kirgiz");
-
-// if (a >= 90) {
-//   console.log("dieta qiling");
-// } else if (a <= 70) {
-//   console.log("ko'proq ovqat yeng");
-// } else {
-//   console.log("yaxshi");
+// Array - 18
+// let arr = [5, 8, 3, 9, 4];
+// let last = arr[arr.length - 1];
+// let result = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] < last) {
+//     result = arr[i];
+//     break;
+//   }
 // }
+// console.log(result);
 
-// 2. N berilgan 1dan n gacha raqamlar orasidagi juft sonlarning yigindisini hisoblab bering.
+// Array - 19
+// let arr = [5, 8, 3, 9, 4, 7];
+// let first = arr[0];
+// let last = arr[arr.length - 1];
+// let foundIndex = 0;
+// for (let i = arr.length - 1; i >= 0; i--) {
+//   if (arr[i] > first && arr[i] < last) {
+//     foundIndex = i;
+//     break;
+//   }
+// }
+// console.log(foundIndex);
 
-// Masalan n=6 busa 1 + 2 + 3 + 4 + 5 qoshib 15 chiqadi.
-
-// let n = 6;
+// Array - 20
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// let K = 2;
+// let L = 4;
+// let sliced = arr.slice(K, L + 1);
 // let sum = 0;
-// for (let i = 1; i <= n; i++) {
-//   if (i % 2 === 0) {
-//     sum = sum + i;
+// for (let i = 0; i < sliced.length; i++) {
+//   sum += sliced[i];
+// }
+// console.log(sum);
+
+// Array - 21
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// let K = 2;
+// let L = 4;
+// let sum = 0;
+// let count = 0;
+// for (let i = K; i <= L; i++) {
+//   sum += arr[i];
+//   count++;
+// }
+// let average = count > 0 ? sum / count : 0;
+// console.log(average);
+
+// Array - 22
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// let K = 2;
+// let L = 4;
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   if (i < K || i > L) {
+//     sum += arr[i];
 //   }
 // }
 // console.log(sum);
 
-// 3. N berilgan n gacha bo'lgan raqamlarning orasidan toqlarni kvadratini olib array yasab bering va u arrayning har bir azosini teskari tarzda, yani eng oxirgisidan boshlab, ekranga chiqaring.
-
-// let N3 = 10;
-// let toqK = 0;
-// let arr = [];
-// for (let i = 0; i <= N3; i++) {
-//   if (i % 2 != 0) {
-//     toqK = i ** 2;
-//     arr.unshift(toqK);
+// Array - 23
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// let K = 2;
+// let L = 4;
+// let sum = 0;
+// let count = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   if (i < K || i > L) {
+//     sum += arr[i];
+//     count++;
 //   }
 // }
-// console.log("Toq sonlar kvadrati", arr);
+// let average = count > 0 ? sum / count : 0;
+// console.log(average);
+
+// Array - 24
+// let arr = [2, 5, 8, 11, 14];
+// let a = arr.length > 1 ? arr[1] - arr[0] : 0;
+// let arithmetic = true;
+// for (let i = 2; i < arr.length; i++) {
+//   if (arr[i] - arr[i - 1] !== a) {
+//     arithmetic = false;
+//     break;
+//   }
+// }
+// console.log(arithmetic ? a : 0);
+
+// Array - 25
+// let arr = [2, 6, 18, 54];
+// if (arr.length < 2 || arr[0] === 0) {
+//   console.log(0);
+// } else {
+//   let a = arr[1] / arr[0];
+//   let b = true;
+//   for (let i = 2; i < arr.length; i++) {
+//     if (arr[i] / arr[i - 1] !== a) {
+//       b = false;
+//       break;
+//     }
+//   }
+//   console.log(b ? a : 0);
+// }
+
+// Array - 1;
+// let n = 5;
+// let arr = [];
+// for (let i = 0; i < n; i++) {
+//   arr.push(2 * i + 1);
+// }
+// console.log(arr);
+
+// Array - 2;
+// let n = 5;
+// let arr = [];
+// let sum = 1;
+// for (let i = 0; i < n; i++) {
+//   arr.push(sum);
+//   sum *= 2;
+// }
+// console.log(arr);
+
+// Array - 3;
+// let n = 5;
+// let a = 3;
+// let b = 4;
+// let arr = [];
+// let c = a;
+// for (let i = 0; i < n; i++) {
+//   arr.push(c);
+//   c += b;
+// }
+// console.log(arr);
