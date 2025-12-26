@@ -167,10 +167,3 @@
 //   return a.slice(0, n);
 // }
 // console.log(tasodifiy([1, 2, 3, 4, 5, 6, 7, 8], 3));
-
-// 3
-function getUniqueWords(str) {
-  const words = str.split(" ");
-  return [...new Set(words)];
-}
-console.log(getUniqueWords("apple banana apple orange banana"));
