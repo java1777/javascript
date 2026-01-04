@@ -17,7 +17,6 @@
 // }
 // console.log(yengi([1, 2, 3], 4));
 
-// 4
 // function uzunligi(arr) {
 //   return arr.length;
 // }
