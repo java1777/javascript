@@ -1,168 +1,270 @@
 // 1
-// function teskari(arr) {
-//   return [...arr].reverse();
-// }
-// console.log(teskari([1, 2, 3, 4, 5]));
+// const Animal = {
+//   type: "animal",
+// };
+
+// const Dog = Object.create(Animal);
+// Dog.breed = "Avcharka";
+// console.log(Dog.type);
 
 // 2
-// function toUpperCase(text) {
-//   return text.toUpperCase();
-// }
-// console.log(toUpperCase("hello"));
+// const Animal = {
+//   speak() {
+//     return "Animal sound";
+//   },
+// };
+
+// const Dog = Object.create(Animal);
+// Dog.speak = function () {
+//   return "Woof woof";
+// };
+
+// console.log(Dog.speak());
+// console.log(Animal.speak());
 
 // 3
-// function yengi(arr, element) {
-//   arr.push(element);
-//   return arr;
-// }
-// console.log(yengi([1, 2, 3], 4));
+// const Animal = { legs: 4 };
+// const Dog = Object.create(Animal);
+// Dog.name = "Rex";
 
-// function uzunligi(arr) {
-//   return arr.length;
-// }
-// console.log(uzunligi([7, 8, 9]));
-
-// 5
-// function replaceInString(str, oldWord, newWord) {
-//   return str.replace(oldWord, newWord);
-// }
-// console.log(replaceInString("Hello World", "World", "JavaScript"));
-
-// 6
-// function birinchi(arr) {
-//   return arr[0];
-// }
-// console.log(birinchi([4, 5, 6]));
-
-// 7
-// function uzunligi(str) {
-//   return str.length;
-// }
-// console.log(uzunligi("uzbekistan"));
-
-// 8
-// function boshigaQoshish(arr, element) {
-//   arr.unshift(element);
-//   return arr;
-// }
-// console.log(boshigaQoshish([2, 3, 4], 1));
-
-// 9
-// function kichkina(str) {
-//   return str.toLowerCase();
-// }
-// console.log(kichkina("JAVASCRIPT"));
-
-// 10
-// function str(arr) {
-//   return arr.join(", ");
-// }
-// console.log(str(["apple", "banana", "cherry"]));
-
-// Medium 1
-// function sortArrayAscending(arr) {
-//   return arr.sort((a, b) => a - b);
-// }
-
-// console.log(sortArrayAscending([5, 2, 9, 1, 7]));
-
-// 2
-// function bolvolish(str, separator = ",") {
-//   return str.split(separator);
-// }
-// console.log(bolvolish("apple,banana,cherry"));
-
-// 3
-// function bormi(arr, value) {
-//   return arr.includes(value);
-// }
-// console.log(bormi([1, 2, 3, 4, 5], 3));
+// console.log(Dog.hasOwnProperty("name"));
+// console.log(Dog.hasOwnProperty("legs"));
+// console.log("name" in Dog);
+// console.log("legs" in Dog);
 
 // 4
-// function getSubstring(str, start, end) {
-//   return str.substring(start, end);
-// }
-// console.log(getSubstring("JavaScript", 0, 4));
+// const Animal = {};
+// const Dog = Object.create(Animal);
+
+// console.log(Object.getPrototypeOf(Dog) === Animal);
 
 // 5
-// function juft(arr) {
-//   return arr.filter((num) => num % 2 === 0);
+// function Animal(name) {
+//   this.name = name;
 // }
-// console.log(juft([1, 2, 3, 4, 5, 6]));
+
+// Animal.prototype.speak = function () {
+//   return `${this.name} makes a sound`;
+// };
+
+// const cat = new Animal("Cat");
+// console.log(cat.speak());
 
 // 6
-// function bormi(mainStr, searchStr) {
-//   return mainStr.includes(searchStr);
-// }
-// console.log(bormi("hello world", "world"));
+// const emptyObj = Object.create(null);
+// console.log(emptyObj.toString);
 
 // 7
-// function indexi(arr, value) {
-//   return arr.indexOf(value);
-// }
-// console.log(indexi([10, 20, 30, 40], 30));
+// const obj = {};
+// console.log(obj.__proto__);
+// console.log(obj.prototype);
+
+// function Func() {}
+// console.log(Func.prototype);
+// console.log(Func.__proto__);
 
 // 8
-// function ajtalgan(arr, start, end) {
-//   return arr.slice(start, end);
-// }
-// console.log(ajtalgan([1, 2, 3, 4, 5], 1, 3));
+// const Animal = {};
+// const dog = Object.create(Animal);
+
+// Animal.speak = function () {
+//   return "Sound";
+// };
+
+// console.log(dog.speak());
 
 // 9
-// function yegindi(arr) {
-//   return arr.reduce((sum, num) => sum + num, 0);
-// }
-// console.log(yegindi([5, 10, 15]));
+// const Grandfather = { grandProp: "grand" };
+// const Father = Object.create(Grandfather);
+// const Son = Object.create(Father);
+
+// console.log(Son.grandProp);
 
 // 10
-// function almashtirish(str, oldChar, newChar) {
-//   return str.split(oldChar).join(newChar);
-// }
-// console.log(almashtirish("123-456-789", "-", " "));
+// const Animal = { sound: "Animal sound" };
+// const Dog = Object.create(Animal);
+// Dog.sound = "Woof";
 
-// 11
-// function kotta(arr) {
-//   return Math.max(...arr);
-// }
-// console.log(kotta([1, 5, 3, 7, 2]));
+// console.log(Dog.sound);
+// console.log(Animal.sound);
 
-// 12
-// function tartibi(arr) {
-//   return arr.sort();
-// }
-// console.log(tartibi(["orange", "apple", "banana"]));
+// 1 Misol - 2chi pdf
+// let talabalar = { Anvar: 18, Jamila: 20, Mirza: 19 };
 
-// 13
-// function mos(arr, condition) {
-//   return arr.every(condition);
-// }
-// console.log(mos([2, 4, 6], (num) => num % 2 === 0));
-
-// 14
-// function teskari(str) {
-//   return str.split("").reverse().join("");
-// }
-// console.log(teskari("javascript"));
-
-// 15
-// function mapOperation(arr, operation) {
-//   return arr.map(operation);
-// }
-// console.log(mapOperation([1, 2, 3, 4], (num) => num + 2));
-
-// Hard 1
-// function palindromi(str) {
-//   const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
-//   const reversedStr = cleanedStr.split("").reverse().join("");
-//   return cleanedStr === reversedStr;
-// }
-// console.log(palindromi("madam"));
-// console.log(palindromi("racecar"));
-// console.log(palindromi("hello"));
+// let talabalarSoni = Object.keys(talabalar).length;
+// console.log("Talabalar soni:", talabalarSoni);
 
 // 2
-// function tasodifiy(arr, n) {
-//   const a = [...arr].sort(() => Math.random() - 0.5);
-//   return a.slice(0, n);
+// let mahsulotlar = { olma: 3000, nok: 4000, banan: 2000 };
+
+// let narxlarYigindisi = Object.values(mahsulotlar).reduce(
+//   (sum, narx) => sum + narx,
+//   0
+// );
+// console.log("Narxlar yig'indisi:", narxlarYigindisi);
+
+// 3
+// let jadval = {
+//   dushanba: "Matematika",
+//   seshanba: "Fizika",
+//   chorshanba: "Informatika",
+// };
+
+// let kunlar = Object.keys(jadval);
+// console.log(kunlar);
+
+// 4
+// let shaxs = { ism: "Sanjar", yosh: 25 };
+
+// Object.freeze(shaxs);
+
+// shaxs.ism = "Misha";
+// shaxs.yosh = 30;
+// shaxs.shahar = "Toshkent";
+
+// console.log(shaxs);
+
+// delete shaxs.ism;
+// console.log(shaxs.ism);
+
+// 5
+// let vazifalar = { uy_ishi: true, dastur_yaratish: false, sport: true };
+
+// let qiymatlar = Object.values(vazifalar);
+
+// let tugatilgan = qiymatlar.filter((vazifa) => vazifa === true).length;
+// let tugatilmagan = qiymatlar.filter((vazifa) => vazifa === false).length;
+
+// console.log(`Tugatilgan: ${tugatilgan}, Tugatilmagan: ${tugatilmagan}`);
+
+// 6
+// let mahsulotlar = { olma: 3000, nok: 4000, banan: 2000 };
+
+// let filtrlangan = Object.entries(mahsulotlar).filter(
+//   ([nomi, narxi]) => narxi > 3000
+// );
+
+// let natija = Object.fromEntries(filtrlangan);
+
+// console.log(natija);
+
+// 7
+// let sinf = { Ahmad: 15, Mohira: -2, Javohir: 17 };
+
+// let yarosliSinf = Object.entries(sinf).reduce((result, [ism, yosh]) => {
+//   if (yosh >= 0) {
+//     result[ism] = yosh;
+//   }
+//   return result;
+// }, {});
+
+// console.log(yarosliSinf);
+
+// 8
+// let bankHisob = { balans: 500000 };
+
+// Object.defineProperty(bankHisob, "pinCode", {
+//   value: "1234",
+//   writable: false,
+//   enumerable: true,
+//   configurable: false,
+// });
+
+// console.log(bankHisob.pinCode);
+
+// bankHisob.pinCode = "5678";
+// console.log(bankHisob.pinCode);
+
+// delete bankHisob.pinCode;
+// console.log(bankHisob.pinCode);
+
+// for (let key in bankHisob) {
+//   console.log(key, ":", bankHisob[key]);
 // }
-// console.log(tasodifiy([1, 2, 3, 4, 5, 6, 7, 8], 3));
+
+// 9
+// let shaxs = {
+//   ism: "Laylo",
+//   familiya: "Islomova",
+//   toliqIsm() {
+//     return this.ism + " " + this.familiya;
+//   },
+// };
+
+// console.log(shaxs.toliqIsm());
+
+// 10
+// let qiymatlar = [10, 20, 30];
+
+// function yigindiHisobla(a, b, c) {
+//   return a + b + c;
+// }
+
+// let natija = yigindiHisobla.call(
+//   null,
+//   qiymatlar[0],
+//   qiymatlar[1],
+//   qiymatlar[2]
+// );
+
+// console.log("Yig'indi:", natija);
+
+// 11
+// let mahsulotlar = { olma: 3000, nok: 4000, banan: 2000 };
+
+// function narxniTop(nomi) {
+//   return this[nomi];
+// }
+
+// let olmaNarxi = narxniTop.bind(mahsulotlar, "olma");
+
+// console.log(olmaNarxi());
+
+// let nokNarxi = narxniTop.bind(mahsulotlar, "nok");
+// let bananNarxi = narxniTop.bind(mahsulotlar, "banan");
+
+// console.log(nokNarxi());
+// console.log(bananNarxi());
+
+// 12
+// let sonlar = [500, 1000, 1500];
+
+// function yigindiniHisobla() {
+//   let sum = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     sum += arguments[i];
+//   }
+//   return sum;
+// }
+
+// let natija = yigindiniHisobla.apply(null, sonlar);
+
+// console.log("Yig'indi:", natija);
+
+// 13
+// let savdo = {
+//   olma: 100,
+//   nok: 150,
+//   banan: 80,
+// };
+
+// savdo.foyda = function () {
+//   let jami = 0;
+//   for (let key in this) {
+//     if (typeof this[key] === "number") {
+//       jami += this[key];
+//     }
+//   }
+//   return jami;
+// };
+
+// console.log("Foyda:", savdo.foyda());
+
+// 15
+// let shaxs1 = { ism: "Olim", yosh: 25 };
+
+// function salomlash() {
+//   console.log(`Salom, men ${this.ism}man! Yoshim ${this.yosh}da.`);
+// }
+
+// salomlash.call(shaxs1);
