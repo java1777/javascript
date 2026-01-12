@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .light {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: black;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="red" class="light"></div>
+    <div id="yellow" class="light"></div>
+    <div id="green" class="light"></div>
+
+    <script>
+      let sequence = ["red", "yellow", "green", "yellow"];
+      let index = 0;
+
+      setInterval(() => {
+        document.getElementById("red").style.background = "black";
+        document.getElementById("yellow").style.background = "black";
+        document.getElementById("green").style.background = "black";
+        document.getElementById(sequence[index]).style.background =
+          sequence[index];
+        index++;
+
+        if (index === sequence.length) {
+          index = 0;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
