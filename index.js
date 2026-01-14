@@ -1,168 +1,201 @@
 // 1
-// function teskari(arr) {
-//   return [...arr].reverse();
+// function createValidator(pass) {
+//   return function (inputPassword) {
+//     return inputPassword === pass;
+//   };
 // }
-// console.log(teskari([1, 2, 3, 4, 5]));
+
+// const tekshir = createValidator("secret123");
+// console.log(tekshir("atidan notori kiritish)"));
 
 // 2
-// function toUpperCase(text) {
-//   return text.toUpperCase();
-// }
-// console.log(toUpperCase("hello"));
+// function createLimitedCall(fn, limit) {
+//   let count = 0;
 
-// 3
-// function yengi(arr, element) {
-//   arr.push(element);
-//   return arr;
-// }
-// console.log(yengi([1, 2, 3], 4));
-
-// function uzunligi(arr) {
-//   return arr.length;
-// }
-// console.log(uzunligi([7, 8, 9]));
-
-// 5
-// function replaceInString(str, oldWord, newWord) {
-//   return str.replace(oldWord, newWord);
-// }
-// console.log(replaceInString("Hello World", "World", "JavaScript"));
-
-// 6
-// function birinchi(arr) {
-//   return arr[0];
-// }
-// console.log(birinchi([4, 5, 6]));
-
-// 7
-// function uzunligi(str) {
-//   return str.length;
-// }
-// console.log(uzunligi("uzbekistan"));
-
-// 8
-// function boshigaQoshish(arr, element) {
-//   arr.unshift(element);
-//   return arr;
-// }
-// console.log(boshigaQoshish([2, 3, 4], 1));
-
-// 9
-// function kichkina(str) {
-//   return str.toLowerCase();
-// }
-// console.log(kichkina("JAVASCRIPT"));
-
-// 10
-// function str(arr) {
-//   return arr.join(", ");
-// }
-// console.log(str(["apple", "banana", "cherry"]));
-
-// Medium 1
-// function sortArrayAscending(arr) {
-//   return arr.sort((a, b) => a - b);
+//   return function (...args) {
+//     if (count < limit) {
+//       count++;
+//       return fn(...args);
+//     } else {
+//       return "Limit tugadi";
+//     }
+//   };
 // }
 
-// console.log(sortArrayAscending([5, 2, 9, 1, 7]));
-
-// 2
-// function bolvolish(str, separator = ",") {
-//   return str.split(separator);
+// function salomBer() {
+//   return "Salom!";
 // }
-// console.log(bolvolish("apple,banana,cherry"));
 
-// 3
-// function bormi(arr, value) {
-//   return arr.includes(value);
-// }
-// console.log(bormi([1, 2, 3, 4, 5], 3));
+// const cheklanganSalom = createLimitedCall(salomBer, 3);
+
+// console.log(cheklanganSalom());
+// console.log(cheklanganSalom());
+// console.log(cheklanganSalom());
+// console.log(cheklanganSalom());
 
 // 4
-// function getSubstring(str, start, end) {
-//   return str.substring(start, end);
+// function createSentence() {
+//   let words = [];
+
+//   return function (word) {
+//     if (word) {
+//       words.push(word);
+//     }
+//     return words.join(" ");
+//   };
 // }
-// console.log(getSubstring("JavaScript", 0, 4));
+
+// const addWord = createSentence();
+// console.log(addWord("Salom"));
+// console.log(addWord("nma"));
+// console.log(addWord("gapla"));
 
 // 5
-// function juft(arr) {
-//   return arr.filter((num) => num % 2 === 0);
+// function guessGame(secretNumber) {
+//   let attempts = 0;
+//   let gameWon = false;
+
+//   return function (guess) {
+//     if (gameWon) {
+//       return "Siz allaqachon yutdingiz!";
+//     }
+
+//     attempts++;
+
+//     if (guess === secretNumber) {
+//       gameWon = true;
+//       return `Tabriklaymiz! ${attempts} urinishda topdingiz!`;
+//     } else if (guess < secretNumber) {
+//       return `Kichikroq. Urinishlar: ${attempts}`;
+//     } else {
+//       return `Kattaroq. Urinishlar: ${attempts}`;
+//     }
+//   };
 // }
-// console.log(juft([1, 2, 3, 4, 5, 6]));
+
+// const game = guessGame(42);
+// console.log(game(10));
+// console.log(game(50));
+// console.log(game(42));
+// console.log(game(30));
 
 // 6
-// function bormi(mainStr, searchStr) {
-//   return mainStr.includes(searchStr);
+// function createAverageCalculator() {
+//   let sum = 0;
+//   let count = 0;
+
+//   return function (num) {
+//     if (typeof num === "number") {
+//       sum += num;
+//       count++;
+//     }
+
+//     if (count === 0) {
+//       return "Hech qanday son kiritilmagan";
+//     }
+
+//     const average = sum / count;
+//     return {
+//       average: average,
+//       sum: sum,
+//       count: count,
+//       message: `O'rtacha: ${average.toFixed(
+//         2
+//       )} (${count} ta son, jami: ${sum})`,
+//     };
+//   };
 // }
-// console.log(bormi("hello world", "world"));
+
+// const calc = createAverageCalculator();
+// console.log(calc(10));
+// console.log(calc(20));
 
 // 7
-// function indexi(arr, value) {
-//   return arr.indexOf(value);
+// function colorGenerator(colorsArray) {
+//   let currentIndex = 0;
+
+//   return function () {
+//     if (colorsArray.length === 0) {
+//       return "Ranglar ro'yxati bo'sh";
+//     }
+
+//     const color = colorsArray[currentIndex];
+//     currentIndex = (currentIndex + 1) % colorsArray.length;
+
+//     return {
+//       color: color,
+//       index: currentIndex === 0 ? colorsArray.length : currentIndex,
+//       total: colorsArray.length,
+//       message: `Rang: ${color} (${
+//         currentIndex === 0 ? colorsArray.length : currentIndex
+//       }/${colorsArray.length})`,
+//     };
+//   };
 // }
-// console.log(indexi([10, 20, 30, 40], 30));
+
+// const getColor = colorGenerator(["qizil", "yashil", "ko'k", "sariq"]);
+// console.log(getColor());
+// console.log(getColor());
 
 // 8
-// function ajtalgan(arr, start, end) {
-//   return arr.slice(start, end);
+// function createTimer() {
+//   const startTime = Date.now();
+
+//   return function () {
+//     const currentTime = Date.now();
+//     const elapsed = currentTime - startTime;
+
+//     const seconds = Math.floor(elapsed / 1000);
+//     const minutes = Math.floor(seconds / 60);
+//     const hours = Math.floor(minutes / 60);
+
+//     return {
+//       milliseconds: elapsed,
+//       seconds: seconds,
+//       minutes: minutes,
+//       hours: hours,
+//       formatted: formatTime(elapsed),
+//       startTime: new Date(startTime).toLocaleTimeString(),
+//       currentTime: new Date(currentTime).toLocaleTimeString(),
+//     };
+//   };
+
+//   function formatTime(ms) {
+//     const sec = Math.floor(ms / 1000);
+//     const min = Math.floor(sec / 60);
+//     const hour = Math.floor(min / 60);
+
+//     return `${hour.toString().padStart(2, "0")}:${(min % 60)
+//       .toString()
+//       .padStart(2, "0")}:${(sec % 60).toString().padStart(2, "0")}.${(ms % 1000)
+//       .toString()
+//       .padStart(3, "0")}`;
+//   }
 // }
-// console.log(ajtalgan([1, 2, 3, 4, 5], 1, 3));
+
+// const getElapsedTime = createTimer();
+
+// setTimeout(() => {
+//   console.log(getElapsedTime());
+// }, 2000);
 
 // 9
-// function yegindi(arr) {
-//   return arr.reduce((sum, num) => sum + num, 0);
+// function createPrefix(prefix) {
+//   return function (word) {
+//     return `${prefix}${word}`;
+//   };
 // }
-// console.log(yegindi([5, 10, 15]));
+
+// const helloer = createPrefix("Salom ");
+// console.log(helloer("Misha"));
 
 // 10
-// function almashtirish(str, oldChar, newChar) {
-//   return str.split(oldChar).join(newChar);
-// }
-// console.log(almashtirish("123-456-789", "-", " "));
+function multiply(a) {
+  return function (b) {
+    return function (c) {
+      return a * b * c;
+    };
+  };
+}
 
-// 11
-// function kotta(arr) {
-//   return Math.max(...arr);
-// }
-// console.log(kotta([1, 5, 3, 7, 2]));
-
-// 12
-// function tartibi(arr) {
-//   return arr.sort();
-// }
-// console.log(tartibi(["orange", "apple", "banana"]));
-
-// 13
-// function mos(arr, condition) {
-//   return arr.every(condition);
-// }
-// console.log(mos([2, 4, 6], (num) => num % 2 === 0));
-
-// 14
-// function teskari(str) {
-//   return str.split("").reverse().join("");
-// }
-// console.log(teskari("javascript"));
-
-// 15
-// function mapOperation(arr, operation) {
-//   return arr.map(operation);
-// }
-// console.log(mapOperation([1, 2, 3, 4], (num) => num + 2));
-
-// Hard 1
-// function palindromi(str) {
-//   const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
-//   const reversedStr = cleanedStr.split("").reverse().join("");
-//   return cleanedStr === reversedStr;
-// }
-// console.log(palindromi("madam"));
-// console.log(palindromi("racecar"));
-// console.log(palindromi("hello"));
-
-// 2
-// function tasodifiy(arr, n) {
-//   const a = [...arr].sort(() => Math.random() - 0.5);
-//   return a.slice(0, n);
-// }
-// console.log(tasodifiy([1, 2, 3, 4, 5, 6, 7, 8], 3));
+console.log(multiply(1)(5)(10));
