@@ -1,176 +1,163 @@
 // 1
-// function teskari(arr) {
-//   return [...arr].reverse();
-// }
-// console.log(teskari([1, 2, 3, 4, 5]));
+// const dollarNarxi = [100, 250, 50, 10];
+// const kurs = 12500;
+
+// const somNarxi = dollarNarxi.map((dollar) => dollar * kurs);
+
+// console.log("Dollar:", dollarNarxi);
+// console.log("So'm:", somNarxi);
 
 // 2
-// function toUpperCase(text) {
-//   return text.toUpperCase();
-// }
-// console.log(toUpperCase("hello"));
+// const menuElementlar = ["Bosh sahifa", "Xizmatlar", "Aloqa"];
+
+// const htmlList = menuElementlar.map((element) => `<li>${element}</li>`);
+
+// console.log("Original massiv:", menuElementlar);
+// console.log("HTML list:", htmlList);
 
 // 3
-// function yengi(arr, element) {
-//   arr.push(element);
-//   return arr;
-// }
-// console.log(yengi([1, 2, 3], 4));
+// const mahsulotlar = [
+//   { p: "Sut", n: 12000 },
+//   { p: "Go'sht", n: 95000 },
+//   { p: "Non", n: 3000 },
+// ];
+
+// const qimmatMahsulotlar = mahsulotlar.filter((mahsulot) => mahsulot.n > 20000);
+
+// console.log("Barcha mahsulotlar:", mahsulotlar);
+// console.log("20,000 dan qimmat mahsulotlar:", qimmatMahsulotlar);
 
 // 4
-// function uzunligi(arr) {
-//   return arr.length;
-// }
-// console.log(uzunligi([7, 8, 9]));
+// const brendlar = ["Apple", "Samsung", "Vivo", "Artel"];
 
-// 5
-// function replaceInString(str, oldWord, newWord) {
-//   return str.replace(oldWord, newWord);
-// }
-// console.log(replaceInString("Hello World", "World", "JavaScript"));
+// const aHarfiBrendlar = brendlar.filter((brend) =>
+//   brend.toLowerCase().includes("a")
+// );
 
-// 6
-// function birinchi(arr) {
-//   return arr[0];
-// }
-// console.log(birinchi([4, 5, 6]));
+// console.log("Barcha brendlar:", brendlar);
+// console.log("'A' harfi bo'lgan brendlar:", aHarfiBrendlar);
 
-// 7
-// function uzunligi(str) {
-//   return str.length;
-// }
-// console.log(uzunligi("uzbekistan"));
+//5
+// const ismlar = ["Ali", "Vali", "Guli"];
 
-// 8
-// function boshigaQoshish(arr, element) {
-//   arr.unshift(element);
-//   return arr;
-// }
-// console.log(boshigaQoshish([2, 3, 4], 1));
-
-// 9
-// function kichkina(str) {
-//   return str.toLowerCase();
-// }
-// console.log(kichkina("JAVASCRIPT"));
-
-// 10
-// function str(arr) {
-//   return arr.join(", ");
-// }
-// console.log(str(["apple", "banana", "cherry"]));
-
-// Medium 1
-// function sortArrayAscending(arr) {
-//   return arr.sort((a, b) => a - b);
-// }
-
-// console.log(sortArrayAscending([5, 2, 9, 1, 7]));
-
-// 2
-// function bolvolish(str, separator = ",") {
-//   return str.split(separator);
-// }
-// console.log(bolvolish("apple,banana,cherry"));
-
-// 3
-// function bormi(arr, value) {
-//   return arr.includes(value);
-// }
-// console.log(bormi([1, 2, 3, 4, 5], 3));
-
-// 4
-// function getSubstring(str, start, end) {
-//   return str.substring(start, end);
-// }
-// console.log(getSubstring("JavaScript", 0, 4));
-
-// 5
-// function juft(arr) {
-//   return arr.filter((num) => num % 2 === 0);
-// }
-// console.log(juft([1, 2, 3, 4, 5, 6]));
+// console.log("SMS yuborish:");
+// ismlar.forEach((ism) => {
+//   console.log(`Hurmatli ${ism}, sizning hisobingiz to'ldirildi!`);
+// });
 
 // 6
-// function bormi(mainStr, searchStr) {
-//   return mainStr.includes(searchStr);
-// }
-// console.log(bormi("hello world", "world"));
+// const nums = [1, 2, 3, 4, 5, 6];
+
+// let sum = 0;
+
+// nums.forEach((son) => {
+//   if (son % 2 === 0) {
+//     sum += son;
+//   }
+// });
+
+// console.log("Sonlar massivi:", nums);
+// console.log("Juft sonlar yig'indisi:", sum);
 
 // 7
-// function indexi(arr, value) {
-//   return arr.indexOf(value);
-// }
-// console.log(indexi([10, 20, 30, 40], 30));
+// const mahsulotlar = [
+//   { nom: "Kitob", narx: 40000 },
+//   { nom: "Ruchka", narx: 2000 },
+// ];
+
+// const umumiyNarx = mahsulotlar.reduce((sum, mahsulot) => {
+//   return sum + mahsulot.narx;
+// }, 0);
+
+// console.log("Mahsulotlar:", mahsulotlar);
+// console.log("Umumiy narx:", umumiyNarx);
 
 // 8
-// function ajtalgan(arr, start, end) {
-//   return arr.slice(start, end);
-// }
-// console.log(ajtalgan([1, 2, 3, 4, 5], 1, 3));
+// const sonlar = [15, 88, 42, 105, 3];
+
+// const engKattaSon = sonlar.reduce((engKatta, hozirgi) => {
+//   return hozirgi > engKatta ? hozirgi : engKatta;
+// }, sonlar[0]);
+
+// console.log("Eng katta son:", engKattaSon);
 
 // 9
-// function yegindi(arr) {
-//   return arr.reduce((sum, num) => sum + num, 0);
-// }
-// console.log(yegindi([5, 10, 15]));
+// const foydalanuvchilar = [
+//   { u: "admin", id: 1 },
+//   { u: "user1", id: 2 },
+//   { u: "user2", id: 3 },
+//   { u: "admin", id: 4 },
+// ];
+
+// const adminFoydalanuvchi = foydalanuvchilar.find((foydalanuvchi) => {
+//   return foydalanuvchi.u === "admin";
+// });
+
+// console.log("Foydalanuvchilar ro'yxati:", foydalanuvchilar);
+// console.log("Admin foydalanuvchi:", adminFoydalanuvchi);
 
 // 10
-// function almashtirish(str, oldChar, newChar) {
-//   return str.split(oldChar).join(newChar);
-// }
-// console.log(almashtirish("123-456-789", "-", " "));
+// const haroratlar = [15, 12, 0, -5, 2];
+
+// const manfiyHaroratIndeksi = haroratlar.findIndex((harorat) => {
+//   return harorat < 0;
+// });
+
+// console.log("Haroratlar:", haroratlar);
+// console.log("Birinchi manfiy harorat indeksi:", manfiyHaroratIndeksi);
 
 // 11
-// function kotta(arr) {
-//   return Math.max(...arr);
-// }
-// console.log(kotta([1, 5, 3, 7, 2]));
+// const sozlar = ["yaxshi", "zo'r", "yomon_soz", "alo"];
+
+// const taqiqlanganSozMavjud = sozlar.some((soz) => soz === "yomon_soz");
+
+// console.log("Taqiqlangan so'z", taqiqlanganSozMavjud);
 
 // 12
-// function tartibi(arr) {
-//   return arr.sort();
-// }
-// console.log(tartibi(["orange", "apple", "banana"]));
+// const yoshlar = [22, 19, 17, 30];
+
+// const hammaVoyagaYetgan = yoshlar.every((yosh) => yosh >= 18);
+
+// console.log("Hamma voyaga yetganmi?:", hammaVoyagaYetgan);
 
 // 13
-// function mos(arr, condition) {
-//   return arr.every(condition);
-// }
-// console.log(mos([2, 4, 6], (num) => num % 2 === 0));
+// const ismlar = ["Zuxra", "Anvar", "Behzod"];
+
+// const tartiblanganIsmlar = [...ismlar].sort();
+
+// console.log("Tartiblangan ismlar:", tartiblanganIsmlar);
 
 // 14
-// function teskari(str) {
-//   return str.split("").reverse().join("");
-// }
-// console.log(teskari("javascript"));
+// const rasmlar = ["Rasm1", "Rasm2", "Rasm3"];
+
+// const teskariRasmlar = [...rasmlar].reverse();
+
+// console.log("Teskari tartib:", teskariRasmlar);
 
 // 15
-// function mapOperation(arr, operation) {
-//   return arr.map(operation);
-// }
-// console.log(mapOperation([1, 2, 3, 4], (num) => num + 2));
+// const sonlar = [1, 2, 3, 4, 5, 6, 7, 8];
 
-// Hard 1
-// function palindromi(str) {
-//   const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
-//   const reversedStr = cleanedStr.split("").reverse().join("");
-//   return cleanedStr === reversedStr;
-// }
-// console.log(palindromi("madam"));
-// console.log(palindromi("racecar"));
-// console.log(palindromi("hello"));
+// const kesilganQism = sonlar.slice(3, 6);
 
-// 2
-// function tasodifiy(arr, n) {
-//   const a = [...arr].sort(() => Math.random() - 0.5);
-//   return a.slice(0, n);
-// }
-// console.log(tasodifiy([1, 2, 3, 4, 5, 6, 7, 8], 3));
+// console.log("3-indeksidan 6-indeksigacha kesilgan qism:", kesilganQism);
 
-// 3
-function getUniqueWords(str) {
-  const words = str.split(" ");
-  return [...new Set(words)];
-}
-console.log(getUniqueWords("apple banana apple orange banana"));
+// 16
+// const kunlar = ["Dushanba", "Seshanba", "Chorshanba"];
+
+// const olinganElementlar = kunlar.splice(1, 1, "Juma");
+
+// console.log("O'zgartirilgan massiv:", kunlar);
+
+// 17
+// const texnologiyalar = ["JS", "React", "Node"];
+
+// const tags = texnologiyalar.join("#");
+
+// console.log(tags);
+
+// 18
+// const gap = "Men JavaScript o'rganyapman";
+
+// const sozlar = gap.split(" ");
+
+// console.log("So'zlarga bo'lingan:", sozlar);
