@@ -73,33 +73,33 @@
 // hayvon2.voice();
 
 // 5. Class yarating u hayvon nomli bulsin va yana 2ta class yarating ular yirtqich va o'txo'r hayvonlarga bulinsin va hayvon clasidan meros olsin. Va 3chala klass bilan ham objectlar yaratib kuring.
-class Animal {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-  run() {
-    console.log(this.name + " is running");
-  }
-}
+// class Animal {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   run() {
+//     console.log(this.name + " is running");
+//   }
+// }
 
-class WildAnimals extends Animal {
-  ovQilish() {
-    console.log(this.name + " ov qilib yedi");
-  }
-}
+// class WildAnimals extends Animal {
+//   ovQilish() {
+//     console.log(this.name + " ov qilib yedi");
+//   }
+// }
 
-const w1 = new WildAnimals("Pantera", 17);
-w1.run();
-w1.ovQilish();
+// const w1 = new WildAnimals("Pantera", 17);
+// w1.run();
+// w1.ovQilish();
 
-class HerbivoresAnimals extends Animal {
-  travaYeyish() {
-    console.log(this.name + " o't yedi");
-  }
-}
+// class HerbivoresAnimals extends Animal {
+//   travaYeyish() {
+//     console.log(this.name + " o't yedi");
+//   }
+// }
 
-const h1 = new HerbivoresAnimals("Quyon", 7);
+// const h1 = new HerbivoresAnimals("Quyon", 7);
 
-h1.run();
-h1.travaYeyish();
+// h1.run();
+// h1.travaYeyish();
