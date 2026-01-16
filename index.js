@@ -1,201 +1,105 @@
-// 1
-// function createValidator(pass) {
-//   return function (inputPassword) {
-//     return inputPassword === pass;
-//   };
+// 1. Funksiya yozing u funksiyaga parameter sifatida ism boradi, usha ismga salom bersin.
+
+// const person = {
+//   firstName: "Javohir",
+//   lastName: "Yunusov",
+// };
+// function greet(greeting) {
+//   console.log(`${greeting}, ${this.firstName} ${this.lastName}!`);
+// }
+// greet.call(person, "Salom");
+
+// 2chi oddiyroq yoli
+// function greet(name) {
+//   console.log(`Salom, ${name}!`);
 // }
 
-// const tekshir = createValidator("secret123");
-// console.log(tekshir("atidan notori kiritish)"));
+// greet("Javohir");
 
-// 2
-// function createLimitedCall(fn, limit) {
-//   let count = 0;
+// 2. Funksiya yozing u parameter sifatida odammi yoshini va og'irligini oladi, shu malumotlardan kelib chiqib sog'liq darajasini ayting yomon, o'rtacha, yaxshi so'glom kabi
+// function salomatligi(age, weight, height) {
+//   const a = weight / (height * height);
 
-//   return function (...args) {
-//     if (count < limit) {
-//       count++;
-//       return fn(...args);
-//     } else {
-//       return "Limit tugadi";
-//     }
-//   };
-// }
-
-// function salomBer() {
-//   return "Salom!";
-// }
-
-// const cheklanganSalom = createLimitedCall(salomBer, 3);
-
-// console.log(cheklanganSalom());
-// console.log(cheklanganSalom());
-// console.log(cheklanganSalom());
-// console.log(cheklanganSalom());
-
-// 4
-// function createSentence() {
-//   let words = [];
-
-//   return function (word) {
-//     if (word) {
-//       words.push(word);
-//     }
-//     return words.join(" ");
-//   };
-// }
-
-// const addWord = createSentence();
-// console.log(addWord("Salom"));
-// console.log(addWord("nma"));
-// console.log(addWord("gapla"));
-
-// 5
-// function guessGame(secretNumber) {
-//   let attempts = 0;
-//   let gameWon = false;
-
-//   return function (guess) {
-//     if (gameWon) {
-//       return "Siz allaqachon yutdingiz!";
-//     }
-
-//     attempts++;
-
-//     if (guess === secretNumber) {
-//       gameWon = true;
-//       return `Tabriklaymiz! ${attempts} urinishda topdingiz!`;
-//     } else if (guess < secretNumber) {
-//       return `Kichikroq. Urinishlar: ${attempts}`;
-//     } else {
-//       return `Kattaroq. Urinishlar: ${attempts}`;
-//     }
-//   };
-// }
-
-// const game = guessGame(42);
-// console.log(game(10));
-// console.log(game(50));
-// console.log(game(42));
-// console.log(game(30));
-
-// 6
-// function createAverageCalculator() {
-//   let sum = 0;
-//   let count = 0;
-
-//   return function (num) {
-//     if (typeof num === "number") {
-//       sum += num;
-//       count++;
-//     }
-
-//     if (count === 0) {
-//       return "Hech qanday son kiritilmagan";
-//     }
-
-//     const average = sum / count;
-//     return {
-//       average: average,
-//       sum: sum,
-//       count: count,
-//       message: `O'rtacha: ${average.toFixed(
-//         2
-//       )} (${count} ta son, jami: ${sum})`,
-//     };
-//   };
-// }
-
-// const calc = createAverageCalculator();
-// console.log(calc(10));
-// console.log(calc(20));
-
-// 7
-// function colorGenerator(colorsArray) {
-//   let currentIndex = 0;
-
-//   return function () {
-//     if (colorsArray.length === 0) {
-//       return "Ranglar ro'yxati bo'sh";
-//     }
-
-//     const color = colorsArray[currentIndex];
-//     currentIndex = (currentIndex + 1) % colorsArray.length;
-
-//     return {
-//       color: color,
-//       index: currentIndex === 0 ? colorsArray.length : currentIndex,
-//       total: colorsArray.length,
-//       message: `Rang: ${color} (${
-//         currentIndex === 0 ? colorsArray.length : currentIndex
-//       }/${colorsArray.length})`,
-//     };
-//   };
-// }
-
-// const getColor = colorGenerator(["qizil", "yashil", "ko'k", "sariq"]);
-// console.log(getColor());
-// console.log(getColor());
-
-// 8
-// function createTimer() {
-//   const startTime = Date.now();
-
-//   return function () {
-//     const currentTime = Date.now();
-//     const elapsed = currentTime - startTime;
-
-//     const seconds = Math.floor(elapsed / 1000);
-//     const minutes = Math.floor(seconds / 60);
-//     const hours = Math.floor(minutes / 60);
-
-//     return {
-//       milliseconds: elapsed,
-//       seconds: seconds,
-//       minutes: minutes,
-//       hours: hours,
-//       formatted: formatTime(elapsed),
-//       startTime: new Date(startTime).toLocaleTimeString(),
-//       currentTime: new Date(currentTime).toLocaleTimeString(),
-//     };
-//   };
-
-//   function formatTime(ms) {
-//     const sec = Math.floor(ms / 1000);
-//     const min = Math.floor(sec / 60);
-//     const hour = Math.floor(min / 60);
-
-//     return `${hour.toString().padStart(2, "0")}:${(min % 60)
-//       .toString()
-//       .padStart(2, "0")}:${(sec % 60).toString().padStart(2, "0")}.${(ms % 1000)
-//       .toString()
-//       .padStart(3, "0")}`;
+//   if (a < 17) {
+//     return "Sog'liq darajasi: yomon";
+//   } else if (a < 25) {
+//     return "Sog'liq darajasi: o'rtacha";
+//   } else {
+//     return "Sog'liq darajasi: chetki";
 //   }
 // }
 
-// const getElapsedTime = createTimer();
+// console.log(salomatligi(28, 70, 1.7));
 
-// setTimeout(() => {
-//   console.log(getElapsedTime());
-// }, 2000);
+// 3. Object yarating u obyektn bank hisobi vazifasini bajarsin. deposit qilish uchun, pul yechib olish uchun va hisobni kurish uchun mahsus metodlari bulsin obyektni
+// const bh = {
+//   balance: 0,
+//   deposite(summa) {
+//     this.balance += summa;
+//     console.log(`Balansingizda ${summa} qoshildi`);
+//     return this.balance;
+//   },
+//   getBalance() {
+//     console.log("Sizni hisobisda " + this.balance);
+//   },
+//   withdraw(summa) {
+//     if (this.balance < summa) {
+//       console.log("Buncha pulingiz yo'q");
+//     } else {
+//       this.balance -= summa;
+//       console.log(`Balansingizdan ${summa} echildi`);
+//     }
+//   },
+// };
+// bh.getBalance();
+// bh.deposite(7000);
+// bh.deposite(7000);
+// bh.getBalance();
+// bh.withdraw(50000);
+// bh.getBalance();
 
-// 9
-// function createPrefix(prefix) {
-//   return function (word) {
-//     return `${prefix}${word}`;
+// 4. Function constructor yarating u har safar chaqirilganda yangi hayvon yaratsin
+// const animal1 = new Animal("tiger", 23);
+// function Animal(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.voice = function () {
+//     console.log(this.name + " voice");
 //   };
 // }
+// const hayvon1 = new Animal("Tiger", 23);
+// const hayvon2 = new Animal("Dog", 7);
 
-// const helloer = createPrefix("Salom ");
-// console.log(helloer("Misha"));
+// hayvon2.voice();
 
-// 10
-function multiply(a) {
-  return function (b) {
-    return function (c) {
-      return a * b * c;
-    };
-  };
+// 5. Class yarating u hayvon nomli bulsin va yana 2ta class yarating ular yirtqich va o'txo'r hayvonlarga bulinsin va hayvon clasidan meros olsin. Va 3chala klass bilan ham objectlar yaratib kuring.
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  run() {
+    console.log(this.name + " is running");
+  }
 }
 
-console.log(multiply(1)(5)(10));
+class WildAnimals extends Animal {
+  ovQilish() {
+    console.log(this.name + " ov qilib yedi");
+  }
+}
+
+const w1 = new WildAnimals("Pantera", 17);
+w1.run();
+w1.ovQilish();
+
+class HerbivoresAnimals extends Animal {
+  travaYeyish() {
+    console.log(this.name + " o't yedi");
+  }
+}
+
+const h1 = new HerbivoresAnimals("Quyon", 7);
+
+h1.run();
+h1.travaYeyish();
