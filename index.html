@@ -7,141 +7,18 @@
     <title>my-project</title>
     <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body class="bg-mainBg">
-    <header class="py-5">
-      <div class="container">
-        <nav class="flex gap-4 items-center pb-5 pl-92.5">
-          <a href="#" class="flex gap-15.75">
-            <img
-              src="./src/assets/icons/logo.svg"
-              alt="logotip"
-              class="block"
-            />
-          </a>
-          <ul class="flex gap-10 items-center">
-            <li class="flex items-center gap-2">
-              <a href="#" class="flex items-center gap-2">
-                <img src="./src/assets/icons/header-menu.svg" alt="menu" />
-                <span>Все курсы</span>
-              </a>
-            </li>
-            <li><a href="#">Мероприятия</a></li>
-            <li><a href="#">Базы знаний</a></li>
-            <li><a href="#">Карьера</a></li>
-            <li class="flex items-center gap-2">
-              <a href="#" class="flex items-center gap-1">
-                <img src="./src/assets/icons/location.svg" alt="location" />
-                <span>Нижний Новгород</span>
-              </a>
-              <a href="#">
-                <img src="./src/assets/icons/drop-down.svg" alt="drop-down" />
-              </a>
-            </li>
-            <li><a href="tel:88009503398">8 800 950-33-98</a></li>
-            <li>
-              <a href="#" class="flex items-center gap-2">
-                <img src="./src/assets/icons/users.svg" alt="users" />
-                <span>Войти</span>
-              </a>
-            </li>
-          </ul>
-          <div id="green">
-            <button class="cursor-pointer items-center">
-              <img src="src/assets/icons/Dark mode .svg" alt="dark mode" />
-            </button>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section>
-        <div class="container">
-          <div class="flex">
-            <div
-              class="bg-dark-blue pl-92.5 pt-31.5 pr-21.75 pb-43.75 relative"
-            >
-              <img
-                src="src/assets/icons/hero-bg--circle.svg"
-                alt="circle"
-                class="absolute top-5 left-1 z-0"
-              />
-              <div>
-                <img
-                  src="src/assets/icons/hero-x.svg"
-                  alt="x"
-                  class="absolute bottom-70 right-173"
-                />
-                <img
-                  src="src/assets/icons/hero-snake.svg"
-                  alt="branch"
-                  class="absolute -bottom-3 right-135"
-                />
-                <img
-                  src="src/assets/icons/hero-triangle.svg"
-                  alt="triangle"
-                  class="absolute bottom-15 right-72"
-                />
-                <img
-                  src="src/assets/icons/hero-circle.svg"
-                  alt="circle"
-                  class="absolute top-5 -right-13"
-                />
-                <img
-                  src="src/assets/icons/hero-chop.svg"
-                  alt="chop"
-                  class="absolute top-25 -right-50"
-                />
-                <img
-                  src="src/assets/icons/hero-line.svg"
-                  alt="line"
-                  class="absolute top-53 -right-20"
-                />
-                <img
-                  src="src/assets/icons/hero-girl--x.svg"
-                  alt="x"
-                  class="absolute top-20 -right-122"
-                />
-                <img
-                  src="src/assets/icons/hero-nimadur.svg"
-                  alt="nimadur"
-                  class="absolute -bottom-10 -right-157"
-                />
-              </div>
-              <h1 class="font-bold text-[36px] text-white">
-                Образовательная платформа <br />
-                ХОД Future Academy
-              </h1>
-              <p class="font-medium text-[20px] text-white pt-10">
-                Актуальные знания для новичков и профессионалов
-              </p>
-            </div>
-          </div>
-          <div class="flex flex-1/2">
-            <img
-              src="src/assets/img/hero-girl.jpg"
-              alt="girl"
-              class="absolute top-32 -z-10"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="mt-25">
-        <div class="container">
-          <div class="wrapper">
-            <div class="relative">
-              <img src="src/assets/icons/message.svg" alt="message" />
-              <span class="absolute top-7 left-5">Кем вы хотите стать?</span>
-
-              <span class="absolute"
-                >Пора найти себя и выбрать подходящий курс :)</span
-              >
-
-              <span class="absolute">Удачи!</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+  <body>
+    <h1>Bozorlik royhati:</h1>
+    <input
+      type="text"
+      id="product"
+      class="border"
+      placeholder="Productlani kirit:"
+    />
+    <button id="add-btn" class="border rounded p-1.5 text-green-600">
+      Qosh
+    </button>
+    <ol id="list"></ol>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
