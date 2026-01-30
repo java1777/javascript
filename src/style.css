@@ -1,45 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
 @import "tailwindcss";
 
-:root {
-  --dark-blue: #00093c;
-  --orange: #f7941d;
-  --blue: #27aae1;
-  --mainBg: #f6f7f9;
-  --roboto: "Roboto", sans-serif;
+.cards {
+  width: 200px;
+  background-color: #1d1d1d;
+  height: 200px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-@theme inline {
-  --color-dark-blue: var(--dark-blue);
-  --color-orange: var(--orange);
-  --color-blue: var(--blue);
-  --color-mainBg: var(--mainBg);
-  --font-secondary: var(--roboto);
-}
-
-.dark {
-  --dark-blue: #4ce954;
-  --orange: #f52eca;
-  --blue: #b80909;
-  --mainBg: hsl(0, 100%, 1%);
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
-.container {
-  max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.wrapper {
-  max-width: 1180px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0px;
-  padding-right: 0px;
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
